@@ -103,7 +103,6 @@
             this.LogBox.ReadOnly = true;
             this.LogBox.Size = new System.Drawing.Size(215, 360);
             this.LogBox.TabIndex = 6;
-            this.LogBox.WordWrap = false;
             // 
             // StartStopButton
             // 
@@ -142,6 +141,7 @@
             this.Controls.Add(this.browser);
             this.Name = "Form1";
             this.Text = "Vakantieveilingen bieder";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

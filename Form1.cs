@@ -46,8 +46,8 @@ namespace VV
             {
                 log("Exception: " + e.Message);
             }
-
-            return !htmlCode.Contains("Win jij de volgende veiling?");
+            return (htmlCode.Contains("HEBBES!"));
+            //return !(htmlCode.Contains("Win jij de volgende veiling?") || htmlCode.Contains("Opniew proberen?"));
         }
 
         private async void CheckForBiddingAsync(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace VV
             else if (secsLeft == 0)
             {
                 t.Stop();
-                log("Auction ended.");
+                log($"Auction ended. Highest bid was {currentBid}");
 
                 await Task.Delay(10000);
 
